@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Produtos - Barbearia Alura</title>
-
-		<link rel="stylesheet" href="./Css/header-footer.css">
+		<link rel="stylesheet" href="./Css/style.css">
 		<link rel="stylesheet" href="./Css/produtos.css">
 	</head>
 	<body>
 		<header>
-			<div class="caixa">
-				<h1><img src="./Imagens/logo.png"></h1>
-
+			<div class="caixa"> <!-- Esta classe 'caixa' é referenciada em style.css -->
+				<h1><img src="./Imagens/logo.png" alt="Logo da Barbearia Alura"></h1>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -22,32 +21,33 @@
 			</div>
 		</header>
 
-		<main>
-			<ul class="produtos">
+		<main class="container-produtos"> <!-- Usando a classe específica de produtos.css -->
+			<h1 class="produtos-titulo">Nossos Produtos</h1>
+			<ul class="lista-produtos">
 				<li>
+					<img src="./Imagens/cabelo.jpg" alt="Desenho de um corte de cabelo masculino estilizado.">
 					<h2>Cabelo</h2>
-					<img src="./Imagens/cabelo.jpg">
-					<p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir</p>
+					<p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir. Estilo personalizado.</p>
 					<p class="produto-preco">R$ 25,00</p>
 				</li>
 				<li>
+					<img src="./Imagens/barba.jpg" alt="Desenho de uma barba bem aparada e estilizada.">
 					<h2>Barba</h2>
-					<img src="./Imagens/barba.jpg">
-					<p class="produto-descricao">Corte e desenho profissional de barba</p>
+					<p class="produto-descricao">Corte e desenho profissional de barba, com produtos de alta qualidade.</p>
 					<p class="produto-preco">R$ 18,00</p>
 				</li>
 				<li>
+					<img src="./Imagens/cabelo+barba.jpg" alt="Desenho combinando cabelo e barba estilizados.">
 					<h2>Cabelo + Barba</h2>
-					<img src="./Imagens/cabelo+barba.jpg">
-					<p class="produto-descricao">Pacote completo de cabelo e barba</p>
+					<p class="produto-descricao">Pacote completo para um visual impecável. Inclui lavagem e finalização.</p>
 					<p class="produto-preco">R$ 35,00</p>
 				</li>
 			</ul>
 		</main>
 
 		<footer>
-			<img src="./Imagens/logo-branco.png">
-			<p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+			<img src="./Imagens/logo-branco.png" alt="Logo da Barbearia Alura em branco">
+			<p class="copyright">&copy; Copyright Barbearia Alura - 2024</p>
 		</footer>
 	</body>
 </html>

@@ -1,60 +1,151 @@
-main{
-    width: 940px;
-    margin: 0 auto;
+/* Estilos específicos para a página contato.html */
+
+.container-contato { /* Container principal para a página de contato */
+    width: 90%;
+    max-width: 940px; /* Mantendo a largura original como máxima */
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-form{
-    margin: 40px 0 40px 0;
+
+.contato-titulo {
+    text-align: center;
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 30px;
 }
-form label, form input{
+
+form {
+    margin-bottom: 40px; /* Espaço abaixo do formulário */
+}
+
+form label { /* Estilo geral para labels */
     display: block;
-}
-form label, form legend{
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-.input-padrao{
-    margin-bottom: 10px;
-    padding: 10px 25px;
-    width: 50%;
-    resize: none;
-}
-.radio-padrao{
-    display: inline-block;
-    margin-right: 7px;
-}
-.checkbox-padrao{
-    display: inline-block;
-    margin: 20px 4px 20px 0;
-}
-fieldset{
-    border: none;
-}
-.enviar{
-    width: 40%;
-    padding: 15px 0;
-    background-color: orange;
-    border-radius: 5px;
-    border: none;
+    font-size: 1.1em; /* Tamanho de fonte ajustado */
+    color: #555; /* Cor mais suave */
+    margin-bottom: 8px; /* Espaçamento abaixo do label */
     font-weight: bold;
-    color: white;
-    font-size: 18px;
+}
+
+/* .input-padrao foi movido para style.css e globalizado */
+/* Se precisar de ajustes específicos para inputs nesta página, use: */
+/* .container-contato .input-padrao { ... } */
+
+textarea.input-padrao { /* Especificidade para textarea, se necessário */
+    min-height: 120px; /* Altura mínima para a área de mensagem */
+    resize: vertical; /* Permitir redimensionamento vertical */
+}
+
+fieldset {
+    border: 1px solid #ddd; /* Borda sutil para fieldsets */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+legend {
+    font-size: 1.3em; /* Tamanho de fonte para legendas */
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px; /* Espaçamento ao redor do texto da legenda */
+    margin-bottom: 15px;
+}
+
+.grupo-radio, .grupo-checkbox { /* Para agrupar opções de radio/checkbox */
+    margin-bottom: 10px;
+}
+
+.grupo-radio label, .grupo-checkbox label { /* Labels dentro de grupos de radio/checkbox */
+    font-size: 1em; /* Tamanho de fonte normal */
+    font-weight: normal;
+    display: inline-flex; /* Para alinhar input e texto */
+    align-items: center; /* Alinhar verticalmente */
+    margin-right: 20px; /* Espaço entre opções */
     cursor: pointer;
-    transition: 1s all;
 }
-.enviar:hover{
-    background-color: darkorange;
-    transform: scale(1.2);
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 8px; /* Espaço entre o input e o texto do label */
+    accent-color: #C78C19; /* Cor de destaque para radio/checkbox selecionados */
 }
-table{
-   margin-top: 30px;
+
+select.input-padrao { /* Estilo para o select, se mantiver a classe .input-padrao */
+    width: auto; /* Permitir que o select ajuste sua largura ao conteúdo ou a um width específico */
+    min-width: 200px; /* Largura mínima */
+    padding-right: 30px; /* Espaço para a seta do select */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%207.5L10%2012.5L15%207.5%22%20stroke%3D%22%23555%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
-thead{
+
+
+/* .enviar agora usa a classe global .botao-principal de style.css */
+/* .enviar:hover também é coberto por .botao-principal:hover */
+
+/* Estilos da tabela de horários */
+.tabela-horarios { /* Classe para a tabela */
+    width: 100%; /* Tabela ocupa toda a largura disponível */
+    border-collapse: collapse; /* Remove espaços entre células */
+    margin-top: 40px; /* Espaço acima da tabela */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tabela-horarios caption { /* Título para a tabela, se adicionado no HTML */
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.tabela-horarios thead {
     background-color: #555555;
     color: white;
 }
-th, td{
-    font-size: 18px;
-    font-weight: bold;
-    padding: 8px 15px;
-    border: 1px solid black;
+
+.tabela-horarios th, .tabela-horarios td {
+    font-size: 1em; /* Tamanho de fonte ajustado */
+    padding: 12px 15px; /* Padding nas células */
+    border: 1px solid #ddd; /* Borda mais sutil */
+    text-align: left; /* Alinhar texto à esquerda por padrão */
+}
+
+.tabela-horarios th {
+    font-weight: bold; /* Cabeçalho em negrito */
+    text-transform: uppercase; /* Cabeçalho em maiúsculas */
+    letter-spacing: 0.5px;
+}
+
+.tabela-horarios tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Linhas alternadas com cor de fundo */
+}
+
+.tabela-horarios tbody tr:hover {
+    background-color: #f1f1f1; /* Efeito hover nas linhas */
+}
+
+/* Removido: main (agora .container-contato), form label/input (estilos mais específicos), .radio-padrao, .checkbox-padrao, .enviar, table (agora .tabela-horarios) */
+
+@media (max-width: 600px) {
+    .input-padrao { /* Ajustar inputs em telas menores */
+        width: calc(100% - 30px); /* Ajuste para padding */
+    }
+
+    .grupo-radio label, .grupo-checkbox label {
+        display: block; /* Empilhar opções de radio/checkbox */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .tabela-horarios th, .tabela-horarios td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+    .contato-titulo {
+        font-size: 1.8em;
+    }
 }

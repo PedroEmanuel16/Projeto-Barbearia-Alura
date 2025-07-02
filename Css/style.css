@@ -1,0 +1,122 @@
+/* Estilos Globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Cor de fundo padrão para as páginas */
+    color: #333; /* Cor de texto padrão */
+}
+
+.container { /* Pode ser usado para centralizar conteúdo */
+    width: 90%;
+    max-width: 940px; /* Mantendo a largura original como máxima */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background: #BBBBBB;
+    padding: 15px 0; /* Ajuste no padding */
+    border-bottom: 3px solid #C78C19; /* Adicionando uma borda para destaque */
+}
+
+header .caixa { /* Usando .caixa dentro do header para especificidade */
+    position: relative;
+    width: 90%;
+    max-width: 940px; /* Consistência */
+    margin: 0 auto;
+    display: flex; /* Usando flexbox para alinhar logo e navegação */
+    justify-content: space-between; /* Espaçar logo e nav */
+    align-items: center; /* Alinhar verticalmente */
+}
+
+header img {
+    height: 70px; /* Reduzindo um pouco o logo para melhor proporção */
+}
+
+nav {
+    /* position, top, right removidos - controlados pelo flex container */
+}
+
+nav ul {
+    list-style: none; /* Remover marcadores de lista */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px; /* Aumentando um pouco o espaçamento */
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px; /* Leve ajuste no tamanho da fonte */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+nav a:hover, nav a:focus { /* Adicionando :focus para acessibilidade */
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+/* Estilos do Rodapé */
+footer {
+    text-align: center;
+    background: url("../Imagens/bg.jpg") no-repeat center center; /* Garantir que a imagem cubra se necessário */
+    background-size: cover; /* Para cobrir a área do rodapé */
+    padding: 40px 0;
+    margin-top: 30px; /* Espaçamento acima do rodapé */
+    border-top: 3px solid #C78C19; /* Adicionando uma borda para destaque */
+}
+
+footer img {
+    height: 80px; /* Ajuste no logo do rodapé */
+    margin-bottom: 10px; /* Espaço abaixo do logo */
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 14px; /* Aumentando um pouco para legibilidade */
+    margin-top: 10px;
+}
+
+/* Classes utilitárias (podem ser expandidas conforme necessário) */
+.titulo-centralizado {
+    text-align: center;
+    margin-bottom: 20px; /* Espaçamento padrão abaixo de títulos */
+}
+
+.input-padrao { /* Movido de contato.css para ser global, se aplicável */
+    display: block; /* Garante que o input ocupe a largura total se não especificado */
+    margin-bottom: 15px;
+    padding: 12px 15px; /* Ajuste no padding */
+    width: calc(100% - 32px); /* Ajuste para padding e borda se houver */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Importante para o cálculo de width */
+    resize: vertical; /* Permitir redimensionamento vertical para textareas */
+}
+
+.botao-principal { /* Classe para botões primários */
+    padding: 12px 25px;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Para que possa ter padding e margin */
+    text-align: center;
+}
+
+.botao-principal:hover, .botao-principal:focus {
+    background-color: darkorange;
+    transform: scale(1.05); /* Efeito de zoom sutil */
+}
