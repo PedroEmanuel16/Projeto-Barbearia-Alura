@@ -3,57 +3,66 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Barbearia Alura</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Barbearia Alura - Home</title>
+	<link rel="stylesheet" href="./Css/style.css">
 	<link rel="stylesheet" href="./Css/index.css">
-	<link rel="stylesheet" href="./Css/header-footer.css">
 </head>
 
 <body>
 	<header>
-		<div class="caixa">
+		<div class="caixa"> <!-- Esta classe 'caixa' é referenciada em style.css -->
 			<h1><img src="./Imagens/logo.png" alt="Logo da Barbearia Alura"></h1>
-
 			<nav>
 				<ul>
-					<li><a href="home.html">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="produtos.html">Produtos</a></li>
 					<li><a href="contato.html">Contato</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<div class="imagem-texto">
-		<img id="banner" src="./Imagens/banner.jpg">
-		<div class="principal">
-			<h2 class="titulo-centralizado">Sobre a Barbearia Alura</h2>
-			<p class="centralizacao">Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o
-				mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque
-				na cidade e conquista novos clientes a cada dia.</p>
-			<p id="missao" class="centralizacao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de
-						vida aos clientes"</strong>.</em></p>
-			<p class="centralizacao">Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O
-				atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos
-				clientes.</p>
-		</div>
-	</div>
 
-	<div class="beneficios">
-		<h3 class="titulo-centralizado">Benefícios</h3>
+	<main class="container"> <!-- Usando a classe container de style.css para centralizar e dar padding -->
+		<section class="banner-container">
+			<img id="banner" src="./Imagens/banner.jpg" alt="Salão interno da Barbearia Alura com cadeiras e espelhos">
+		</section>
 
-		<div class="lista-imagem">
-			<ul class="beneficios-lista">
-				<li class="itens">Atendimento aos Clientes</li>
-				<li class="itens">Espaço diferenciado</li>
-				<li class="itens">Localização</li>
-				<li class="itens">Profissionais Qualificados</li>
-			</ul>
+		<section class="secao-sobre">
+			<div class="conteudo-sobre">
+				<h2 class="titulo-centralizado">Sobre a Barbearia Alura</h2>
+				<p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o
+					mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque
+					na cidade e conquista novos clientes a cada dia.</p>
+				<p id="missao">Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de
+							vida aos clientes"</strong>.</p>
+				<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O
+					atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos
+					clientes.</p>
+			</div>
+		</section>
 
-			<img src="./Imagens/beneficios.jpg" class="imagembeneficios">
-		</div>
-	</div>
+		<section class="secao-beneficios">
+			<h3 class="titulo-centralizado">Benefícios</h3>
+			<div class="conteudo-beneficios">
+				<ul class="beneficios-lista">
+					<li class="item">Atendimento aos Clientes</li>
+					<li class="item">Espaço diferenciado</li>
+					<li class="item">Localização Privilegiada</li>
+					<li class="item">Profissionais Qualificados</li>
+					<li class="item">Produtos de Alta Qualidade</li>
+					<li class="item">Ambiente Agradável</li>
+				</ul>
+				<figure class="container-imagem-beneficios">
+					<img src="./Imagens/beneficios.jpg" class="imagem-beneficios" alt="Barbeiro profissional cortando a barba de um cliente.">
+				</figure>
+			</div>
+		</section>
+	</main>
+
 	<footer>
-		<img src="./Imagens/logo-branco.png" alt="Logo da Barbearia Alura">
-		<p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+		<img src="./Imagens/logo-branco.png" alt="Logo da Barbearia Alura em branco">
+		<p class="copyright">&copy; Copyright Barbearia Alura - 2024</p>
 	</footer>
 </body>
 

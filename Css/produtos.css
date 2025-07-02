@@ -1,50 +1,92 @@
-.produtos {
-	width: 940px;
-	margin: 0 auto;
-	padding: 50px 0;
+/* Estilos específicos para a página produtos.html */
+
+.container-produtos { /* Novo container principal para a página de produtos */
+    width: 90%;
+    max-width: 1200px; /* Aumentar um pouco a largura máxima para acomodar melhor os produtos */
+    margin: 30px auto; /* Espaçamento superior/inferior e centralização */
+    padding: 20px;
 }
 
-.produtos li {
-	display: inline-block;
-	text-align: center;
-	width: 30%;
-	vertical-align: top;
-	margin: 0 1.5%;
-	padding: 30px 20px;
-	box-sizing: border-box;
-	border: 2px solid #000000;
-	border-radius: 10px;
+.produtos-titulo { /* Título da seção de produtos */
+    text-align: center;
+    font-size: 2.5em; /* Tamanho maior para o título principal da página */
+    color: #333;
+    margin-bottom: 40px; /* Mais espaço abaixo do título */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.produtos li:hover {
-	border-color: #C78C19;
+.lista-produtos { /* Antigo .produtos */
+    display: grid; /* Usar grid para layout dos produtos */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Layout responsivo com colunas */
+    gap: 30px; /* Espaçamento entre os cards de produtos */
+    padding: 0;
+    list-style: none;
 }
 
-.produtos li:active {
-	border-color: #088C19;	
+.lista-produtos li {
+    background-color: #fff;
+    border: 1px solid #ddd; /* Borda sutil */
+    border-radius: 10px;
+    padding: 25px; /* Padding interno */
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra mais suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    display: flex; /* Usar flex para alinhar conteúdo interno verticalmente */
+    flex-direction: column; /* Empilhar itens do card */
+    justify-content: space-between; /* Distribuir espaço entre os elementos do card */
 }
 
-.produtos li:hover h2 {
-	font-size: 32px;
+.lista-produtos li:hover {
+    transform: translateY(-5px); /* Efeito de levantar no hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    border-color: #C78C19; /* Destacar borda no hover */
 }
 
-.produtos h2 {
-	font-size: 30px;
-	font-weight: bold;
+.lista-produtos li img {
+    max-width: 100%; /* Imagem responsiva dentro do card */
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+.lista-produtos h2 {
+    font-size: 1.8em; /* Ajuste no tamanho da fonte */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Menos espaço abaixo do título do produto */
+    min-height: 58px;
 }
 
 .produto-descricao {
-	font-size: 18px;
+    font-size: 1em; /* Ajuste no tamanho da fonte */
+    color: #666; /* Cor mais suave para descrição */
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Permitir que a descrição cresça para preencher espaço */
 }
 
 .produto-preco {
-	font-size: 22px;
-	font-weight: bold;
-	margin-top: 10px;
+    font-size: 1.5em; /* Tamanho destacado para o preço */
+    font-weight: bold;
+    color: #C78C19; /* Cor de destaque para o preço */
+    margin-top: auto;
 }
 
-footer{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+@media (max-width: 600px) {
+    .container-produtos {
+        width: 95%;
+    }
+    .lista-produtos {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+    .lista-produtos h2 {
+        font-size: 1.6em;
+        min-height: auto; /* Remover altura mínima em mobile */
+    }
+    .produto-preco {
+        font-size: 1.4em;
+    }
 }
